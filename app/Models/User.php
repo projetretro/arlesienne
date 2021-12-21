@@ -44,4 +44,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     *
+     * Return the user's posts
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }

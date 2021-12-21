@@ -3,8 +3,8 @@
     "type": "project",
     "description": "A CMS based on the laravel framework.",
     "keywords": ["framework", "laravel", "arlesienne", "cms", "french"],
-    "license": "PROJETRETRO GENERAL LICENSE.md",
-    "homepage": "",
+    "license": "PROJETRETRO GENERAL LICENSE",
+    "homepage": "https://github.com/projetretro/arlesienne",
     "readme": "./README.md",
     "authors": [
         {
