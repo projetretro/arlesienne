@@ -23,6 +23,7 @@ class AlterPostTagTableAddForeignKeys extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
+            $table->unique(['post_id', 'tag_id']);
         });
     }
 

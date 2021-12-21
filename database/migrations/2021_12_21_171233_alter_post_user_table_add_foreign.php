@@ -22,6 +22,8 @@ class AlterPostUserTableAddForeign extends Migration
             $table->foreignId('user_id')->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+            $table->unique(['post_id', 'user_id']);
         });
     }
 
@@ -34,6 +36,8 @@ class AlterPostUserTableAddForeign extends Migration
     {
         Schema::table('post_user', function (Blueprint $table) {
             //
+            $table->dropConstrainedForeignId('post_id');
+            $table->dropConstrainedForeignId('user_id');
         });
     }
 }
